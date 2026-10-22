@@ -1,0 +1,26 @@
+{
+  "/inspection/cmd_vel": [
+    "geometry_msgs/msg/Twist"
+  ],
+  "/parameter_events": [
+    "rcl_interfaces/msg/ParameterEvent"
+  ],
+  "/rosout": [
+    "rcl_interfaces/msg/Log"
+  ],
+  "/turtle1/cmd_vel": [
+    "geometry_msgs/msg/Twist"
+  ],
+  "/turtle1/color_sensor": [
+    "turtlesim/msg/Color"
+  ],
+  "/turtle1/pose": [
+    "turtlesim/msg/Pose"
+  ],
+  "/turtle1/rotate_absolute/_action/feedback": [
+    "turtlesim/action/RotateAbsolute_FeedbackMessage"
+  ],
+  "/turtle1/rotate_absolute/_action/status": [
+    "action_msgs/msg/GoalStatusArray"
+  ]
+}

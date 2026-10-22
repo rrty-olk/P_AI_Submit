@@ -1,0 +1,56 @@
+[
+  {
+    "id": "case_01",
+    "image": "01_intact.png",
+    "expected": "PASS",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_02",
+    "image": "02_broken.png",
+    "expected": "REJECT",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_03",
+    "image": "03_covered.png",
+    "expected": "RECHECK",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_04",
+    "image": "04_broken.png",
+    "expected": "REJECT",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_05",
+    "image": "05_intact.png",
+    "expected": "PASS",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_06",
+    "image": "06_covered.png",
+    "expected": "RECHECK",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_07",
+    "image": "07_intact.png",
+    "expected": "PASS",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_08",
+    "image": "08_broken.png",
+    "expected": "REJECT",
+    "source": "deterministically generated synthetic washer inspection image"
+  },
+  {
+    "id": "case_09",
+    "image": "09_covered.png",
+    "expected": "RECHECK",
+    "source": "deterministically generated synthetic washer inspection image"
+  }
+]

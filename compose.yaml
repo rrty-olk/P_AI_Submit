@@ -1,0 +1,50 @@
+name: physicalai-inspection
+services:
+  tools:
+    image: physicalai-inspection:local
+    profiles: [tools]
+    command: ["python", "scripts/generate_cases.py"]
+    volumes:
+      - .:/app:ro
+      - ./data:/app/data
+      - ./output:/app/output
+    init: true
+  ai:
+    image: physicalai-inspection:local
+    build: .
+    command: ["python", "-m", "inspection.ai_server"]
+    environment:
+      MODEL_REVISION: ${MODEL_REVISION:?Run scripts/fetch_official.py first}
+      HF_HOME: /models
+    volumes:
+      - model-cache:/models
+      - ./data:/app/data:ro
+      - ./output:/app/output
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 180
+    init: true
+  robot:
+    image: physicalai-inspection:local
+    command: ["bash", "/app/scripts/robot.sh"]
+    depends_on:
+      ai:
+        condition: service_healthy
+    environment:
+      AI_URL: http://ai:8000
+      DISPLAY: :99
+    volumes:
+      - ./data:/app/data:ro
+      - ./output:/app/output
+    init: true
+volumes:
+  model-cache:

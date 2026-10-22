@@ -1,0 +1,23 @@
+{
+  "model_id": "LiquidAI/d1-omni-600M",
+  "revision": "02b55d7076f15129e59ab3f94783f32c4b088674",
+  "device": "cuda:0",
+  "dtype": "torch.float16",
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.2",
+  "cuda_runtime": "12.8",
+  "api": "system_one",
+  "question": {
+    "inspection": {
+      "type": "choice",
+      "instructions": "Choose the most accurate description of the image.",
+      "criteria": {
+        "PASS": "An intact washer.",
+        "REJECT": "A damaged washer.",
+        "RECHECK": "An obscured washer."
+      }
+    }
+  },
+  "parameter_count": 587143681
+}

@@ -1,0 +1,398 @@
+[
+  {
+    "prompt_index": 0,
+    "question": {
+      "type": "choice",
+      "instructions": "Describe the visible shape in this image.",
+      "criteria": {
+        "PASS": "A complete circular gray ring with a hole.",
+        "REJECT": "A broken C-shaped gray ring with a missing piece.",
+        "RECHECK": "A dark rectangle obscures the gray ring."
+      }
+    },
+    "image": "01_intact.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "RECHECK",
+          "confidence": 0.7357764840126038,
+          "probabilities": {
+            "PASS": 0.19193877279758453,
+            "REJECT": 0.07228479534387589,
+            "RECHECK": 0.7357764840126038
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 317,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.5895000750000463,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 0,
+    "question": {
+      "type": "choice",
+      "instructions": "Describe the visible shape in this image.",
+      "criteria": {
+        "PASS": "A complete circular gray ring with a hole.",
+        "REJECT": "A broken C-shaped gray ring with a missing piece.",
+        "RECHECK": "A dark rectangle obscures the gray ring."
+      }
+    },
+    "image": "02_broken.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "RECHECK",
+          "confidence": 0.4963444173336029,
+          "probabilities": {
+            "PASS": 0.1869250237941742,
+            "REJECT": 0.3167305290699005,
+            "RECHECK": 0.4963444173336029
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 317,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.03657751800005826,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 0,
+    "question": {
+      "type": "choice",
+      "instructions": "Describe the visible shape in this image.",
+      "criteria": {
+        "PASS": "A complete circular gray ring with a hole.",
+        "REJECT": "A broken C-shaped gray ring with a missing piece.",
+        "RECHECK": "A dark rectangle obscures the gray ring."
+      }
+    },
+    "image": "03_covered.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "RECHECK",
+          "confidence": 0.6309424638748169,
+          "probabilities": {
+            "PASS": 0.08243899047374725,
+            "REJECT": 0.28661853075027466,
+            "RECHECK": 0.6309424638748169
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 317,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.03815609299999778,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 1,
+    "question": {
+      "type": "choice",
+      "instructions": "Is the metal ring complete, broken, or hidden?",
+      "criteria": {
+        "PASS": "Complete metal ring.",
+        "REJECT": "Broken metal ring.",
+        "RECHECK": "Hidden metal ring."
+      }
+    },
+    "image": "01_intact.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "PASS",
+          "confidence": 0.7652092576026917,
+          "probabilities": {
+            "PASS": 0.7652092576026917,
+            "REJECT": 0.0014150721253827214,
+            "RECHECK": 0.23337562382221222
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 303,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.03435399600004985,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 1,
+    "question": {
+      "type": "choice",
+      "instructions": "Is the metal ring complete, broken, or hidden?",
+      "criteria": {
+        "PASS": "Complete metal ring.",
+        "REJECT": "Broken metal ring.",
+        "RECHECK": "Hidden metal ring."
+      }
+    },
+    "image": "02_broken.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "REJECT",
+          "confidence": 0.4754010736942291,
+          "probabilities": {
+            "PASS": 0.39258480072021484,
+            "REJECT": 0.4754010736942291,
+            "RECHECK": 0.13201411068439484
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 303,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.034460015999911775,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 1,
+    "question": {
+      "type": "choice",
+      "instructions": "Is the metal ring complete, broken, or hidden?",
+      "criteria": {
+        "PASS": "Complete metal ring.",
+        "REJECT": "Broken metal ring.",
+        "RECHECK": "Hidden metal ring."
+      }
+    },
+    "image": "03_covered.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "PASS",
+          "confidence": 0.87984299659729,
+          "probabilities": {
+            "PASS": 0.87984299659729,
+            "REJECT": 0.013159011490643024,
+            "RECHECK": 0.10699797421693802
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 303,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.035627966999982164,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 2,
+    "question": {
+      "type": "choice",
+      "instructions": "Choose the most accurate description of the image.",
+      "criteria": {
+        "PASS": "An intact washer.",
+        "REJECT": "A damaged washer.",
+        "RECHECK": "An obscured washer."
+      }
+    },
+    "image": "01_intact.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "PASS",
+          "confidence": 0.852626383304596,
+          "probabilities": {
+            "PASS": 0.852626383304596,
+            "REJECT": 0.10183169692754745,
+            "RECHECK": 0.045541953295469284
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 304,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.04088937000005899,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 2,
+    "question": {
+      "type": "choice",
+      "instructions": "Choose the most accurate description of the image.",
+      "criteria": {
+        "PASS": "An intact washer.",
+        "REJECT": "A damaged washer.",
+        "RECHECK": "An obscured washer."
+      }
+    },
+    "image": "02_broken.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "REJECT",
+          "confidence": 0.7371976971626282,
+          "probabilities": {
+            "PASS": 0.17509980499744415,
+            "REJECT": 0.7371976971626282,
+            "RECHECK": 0.08770245313644409
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 304,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.04128382400006103,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 2,
+    "question": {
+      "type": "choice",
+      "instructions": "Choose the most accurate description of the image.",
+      "criteria": {
+        "PASS": "An intact washer.",
+        "REJECT": "A damaged washer.",
+        "RECHECK": "An obscured washer."
+      }
+    },
+    "image": "03_covered.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "PASS",
+          "confidence": 0.5670418739318848,
+          "probabilities": {
+            "PASS": 0.5670418739318848,
+            "REJECT": 0.19750139117240906,
+            "RECHECK": 0.2354566752910614
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 304,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.034526321000043936,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 3,
+    "question": {
+      "type": "choice",
+      "instructions": "What shape is visible?",
+      "criteria": {
+        "PASS": "A full circular ring.",
+        "REJECT": "An open ring with a gap.",
+        "RECHECK": "A black rectangle."
+      }
+    },
+    "image": "01_intact.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "REJECT",
+          "confidence": 0.9802659153938293,
+          "probabilities": {
+            "PASS": 0.019337430596351624,
+            "REJECT": 0.9802659153938293,
+            "RECHECK": 0.00039665985968895257
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 300,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.038767331000030936,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 3,
+    "question": {
+      "type": "choice",
+      "instructions": "What shape is visible?",
+      "criteria": {
+        "PASS": "A full circular ring.",
+        "REJECT": "An open ring with a gap.",
+        "RECHECK": "A black rectangle."
+      }
+    },
+    "image": "02_broken.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "REJECT",
+          "confidence": 0.9511469006538391,
+          "probabilities": {
+            "PASS": 0.04772622883319855,
+            "REJECT": 0.9511469006538391,
+            "RECHECK": 0.0011268062517046928
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 300,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.03588669700002356,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  },
+  {
+    "prompt_index": 3,
+    "question": {
+      "type": "choice",
+      "instructions": "What shape is visible?",
+      "criteria": {
+        "PASS": "A full circular ring.",
+        "REJECT": "An open ring with a gap.",
+        "RECHECK": "A black rectangle."
+      }
+    },
+    "image": "03_covered.png",
+    "result": {
+      "answers": {
+        "inspection": {
+          "type": "choice",
+          "choice": "RECHECK",
+          "confidence": 0.501979649066925,
+          "probabilities": {
+            "PASS": 0.022755561396479607,
+            "REJECT": 0.4752647876739502,
+            "RECHECK": 0.501979649066925
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 300,
+        "output_tokens": 0
+      }
+    },
+    "inference_seconds": 0.036762708999958704,
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674"
+  }
+]

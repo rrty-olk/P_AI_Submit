@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.mp4 binary
+*.pdf binary
+*.ttf binary
+*.zip binary
+# Preserve upstream license text, including its original whitespace.
+docs/fonts/OFL.txt -whitespace
+docs/official_model/LICENSE -whitespace

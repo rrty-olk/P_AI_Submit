@@ -1,0 +1,23 @@
+{
+  "watchdog_expiry": {
+    "passed": true,
+    "velocity_after_1s": 0.0
+  },
+  "invalid_command": {
+    "passed": true,
+    "velocity": 0.0
+  },
+  "missing_image": {
+    "passed": true,
+    "status": 500
+  },
+  "stale_feedback": {
+    "passed": true
+  },
+  "movement_timeout": {
+    "passed": true
+  },
+  "inference_timeout": {
+    "passed": true
+  }
+}

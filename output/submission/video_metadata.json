@@ -1,0 +1,19 @@
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "format": {
+    "duration": "92.066667"
+  },
+  "playback_speed": 1,
+  "measured_run_seconds": 80.02540493011475,
+  "intro_seconds": 6.0,
+  "outro_seconds": 6.0,
+  "presentation_language": "ja",
+  "font": "M PLUS 1p"
+}

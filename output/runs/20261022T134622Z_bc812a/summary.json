@@ -1,0 +1,180 @@
+{
+  "status": "complete",
+  "run": "20261022T134622Z_bc812a",
+  "cases": [
+    {
+      "id": "case_01",
+      "image": "01_intact.png",
+      "expected": "PASS",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "PASS",
+      "route": "PASS",
+      "reason": "model",
+      "confidence": 0.852626383304596,
+      "probabilities": {
+        "PASS": 0.852626383304596,
+        "REJECT": 0.10183169692754745,
+        "RECHECK": 0.045541953295469284
+      },
+      "inference_seconds": 1.903860941001767
+    },
+    {
+      "id": "case_02",
+      "image": "02_broken.png",
+      "expected": "REJECT",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "REJECT",
+      "route": "REJECT",
+      "reason": "model",
+      "confidence": 0.7371976971626282,
+      "probabilities": {
+        "PASS": 0.17509980499744415,
+        "REJECT": 0.7371976971626282,
+        "RECHECK": 0.08770245313644409
+      },
+      "inference_seconds": 0.22340329800135805
+    },
+    {
+      "id": "case_03",
+      "image": "03_covered.png",
+      "expected": "RECHECK",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "PASS",
+      "route": "RECHECK",
+      "reason": "low_confidence",
+      "confidence": 0.5670418739318848,
+      "probabilities": {
+        "PASS": 0.5670418739318848,
+        "REJECT": 0.19750139117240906,
+        "RECHECK": 0.2354566752910614
+      },
+      "inference_seconds": 0.20910140400155797
+    },
+    {
+      "id": "case_04",
+      "image": "04_broken.png",
+      "expected": "REJECT",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "REJECT",
+      "route": "REJECT",
+      "reason": "model",
+      "confidence": 0.6592211127281189,
+      "probabilities": {
+        "PASS": 0.2673919200897217,
+        "REJECT": 0.6592211127281189,
+        "RECHECK": 0.07338698208332062
+      },
+      "inference_seconds": 0.24078214100154582
+    },
+    {
+      "id": "case_05",
+      "image": "05_intact.png",
+      "expected": "PASS",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "PASS",
+      "route": "PASS",
+      "reason": "model",
+      "confidence": 0.6496272683143616,
+      "probabilities": {
+        "PASS": 0.6496272683143616,
+        "REJECT": 0.18612132966518402,
+        "RECHECK": 0.16425149142742157
+      },
+      "inference_seconds": 0.23883360699983314
+    },
+    {
+      "id": "case_06",
+      "image": "06_covered.png",
+      "expected": "RECHECK",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "PASS",
+      "route": "PASS",
+      "reason": "model",
+      "confidence": 0.6471690535545349,
+      "probabilities": {
+        "PASS": 0.6471690535545349,
+        "REJECT": 0.28162500262260437,
+        "RECHECK": 0.07120594382286072
+      },
+      "inference_seconds": 0.28099270399980014
+    },
+    {
+      "id": "case_07",
+      "image": "07_intact.png",
+      "expected": "PASS",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "PASS",
+      "route": "PASS",
+      "reason": "model",
+      "confidence": 0.7517175078392029,
+      "probabilities": {
+        "PASS": 0.7517175078392029,
+        "REJECT": 0.1429084688425064,
+        "RECHECK": 0.10537409782409668
+      },
+      "inference_seconds": 0.1384752319972904
+    },
+    {
+      "id": "case_08",
+      "image": "08_broken.png",
+      "expected": "REJECT",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "RECHECK",
+      "route": "RECHECK",
+      "reason": "low_confidence",
+      "confidence": 0.49633315205574036,
+      "probabilities": {
+        "PASS": 0.11560927331447601,
+        "REJECT": 0.38805752992630005,
+        "RECHECK": 0.49633315205574036
+      },
+      "inference_seconds": 0.33453479200034053
+    },
+    {
+      "id": "case_09",
+      "image": "09_covered.png",
+      "expected": "RECHECK",
+      "source": "deterministically generated synthetic washer inspection image",
+      "model_choice": "PASS",
+      "route": "PASS",
+      "reason": "model",
+      "confidence": 0.601958155632019,
+      "probabilities": {
+        "PASS": 0.601958155632019,
+        "REJECT": 0.3172096610069275,
+        "RECHECK": 0.08083219826221466
+      },
+      "inference_seconds": 0.2707510200016259
+    }
+  ],
+  "start_time": 1792676782.5147665,
+  "time_base": "epoch origin + monotonic elapsed (immune to wall-clock steps)",
+  "clock_wall_origin": 1792676782.5085223,
+  "clock_monotonic_origin": 22015.514989503,
+  "model_metadata": {
+    "model_id": "LiquidAI/d1-omni-600M",
+    "revision": "02b55d7076f15129e59ab3f94783f32c4b088674",
+    "device": "cuda:0",
+    "dtype": "torch.float16",
+    "gpu": "NVIDIA GeForce RTX 3070",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.20.2",
+    "cuda_runtime": "12.8",
+    "api": "system_one",
+    "question": {
+      "inspection": {
+        "type": "choice",
+        "instructions": "Choose the most accurate description of the image.",
+        "criteria": {
+          "PASS": "An intact washer.",
+          "REJECT": "A damaged washer.",
+          "RECHECK": "An obscured washer."
+        }
+      }
+    },
+    "parameter_count": 587143681
+  },
+  "distinct_routes": 3,
+  "raw_accuracy": 0.5555555555555556,
+  "end_time": 1792676863.6846418
+}

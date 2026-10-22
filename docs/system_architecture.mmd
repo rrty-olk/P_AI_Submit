@@ -1,0 +1,19 @@
+flowchart TB
+    INPUT["部品画像：正常・破損・遮蔽"]
+    MODEL["AI推論：LiquidAI/d1-omni-600M<br/>公式system_one／NVIDIA GPU"]
+    RESULT["PASS・REJECT・RECHECK<br/>判定・確率・推論時間"]
+    INPUT --> MODEL --> RESULT
+    subgraph ROS["ROS 2 Jazzy"]
+      CTRL["検査制御ノード<br/>AI応答を受信して目標を選択"]
+      TARGET["合格：(8.5, 8.5)／不合格：(2.0, 8.5)<br/>再検査：(5.5, 2.0)<br/>確信度0.60未満：停止後に再検査へ"]
+      LOOP["現在姿勢と目標との差から<br/>並進速度・角速度を計算"]
+      WATCH["独立した速度監視ノード"]
+      SIM["turtlesim<br/>2次元移動ロボット"]
+      NEXT["位置誤差0.12以下で停止・到達確認<br/>次の検査画像へ進む"]
+      CTRL --> TARGET --> LOOP
+      LOOP -->|"/inspection/cmd_vel：Twist"| WATCH
+      WATCH -->|"/turtle1/cmd_vel：Twist"| SIM
+      SIM -->|"/turtle1/pose：Pose"| LOOP
+      LOOP -->|"到達"| NEXT
+    end
+    RESULT -->|"HTTP応答／JSON"| CTRL
