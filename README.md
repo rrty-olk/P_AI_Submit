@@ -1,6 +1,5 @@
 # 画像検査とROS 2による自律仕分け
 
-提出用リポジトリ：[rrty-olk/P_AI_Submit](https://github.com/rrty-olk/P_AI_Submit)。
 [説明資料（PDF）](output/submission/report.pdf) ／
 [説明資料（Markdown・Mermaid構成図）](output/submission/report.md) ／
 [実動作動画（MP4・約92秒）](output/submission/inspection_demo.mp4)。
